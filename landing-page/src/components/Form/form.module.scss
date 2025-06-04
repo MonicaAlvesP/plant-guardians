@@ -1,45 +1,77 @@
-@use '../../styles/abstract/variables' as *;
+@use '../../styles/abstract/variables' as variables;
 
 .formContainer {
-  display: flex;
-  justify-content: space-around;
-  align-items: center;
-  padding: 2rem 1rem;
-  min-height: 60vh;
-  height: auto;
   background-color: #06480036;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  height: 80vh;
 
-  h2 {
-    font-size: 1.8rem;
-    margin-bottom: 1rem;
-    color: #333;
+  @media (max-width: 768px) {
+    flex-direction: column;
+    height: auto;
+    padding: 1.5rem 0;
   }
+}
 
-  p {
-    width: 75%;
-    margin-bottom: 2rem;
-  }
+.form {
+  display: flex;
+  flex-direction: column;
+  align-items: start;
+  justify-content: center;
+  width: 50%;
+  margin-left: 4rem;
 
   button {
     margin-top: 1rem;
     padding: 0.75rem;
-    background-color: $secondary-color;
-    color: white;
+    color: rgb(18, 17, 17);
     border: none;
     border-radius: 5px;
     font-size: 1rem;
     cursor: pointer;
     width: 70%;
+    background-color: variables.$secondary-color;
 
     &:hover {
       background-color: #0056b3;
+      color: #fff;
     }
   }
 
   @media (max-width: 768px) {
-    flex-direction: column;
-    padding: 1.5rem;
-    height: auto;
+    width: 100%;
+    margin: 0;
+    padding: 2rem;
+    align-items: stretch;
+
+    button {
+      width: 100%;
+      margin-top: 2rem;
+    }
+  }
+}
+
+.formHeader {
+  line-height: 1.5;
+  margin-bottom: 2rem;
+
+  h2 {
+    font-size: 1.8rem;
+    color: #333;
+  }
+
+  p {
+    width: 75%;
+  }
+
+  @media (max-width: 768px) {
+    h2 {
+      font-size: 1.4rem;
+    }
+    p {
+      width: 100%;
+    }
   }
 }
 
@@ -54,6 +86,7 @@
     color: #333;
   }
 
+  textarea,
   input {
     width: 100%;
     padding: 0.5rem;
@@ -61,8 +94,16 @@
     border-radius: 4px;
     font-size: 1rem;
     box-sizing: border-box;
-  }
+    color: #222;
+    background: #fff;
 
+    &:hover,
+    &:focus {
+      color: #222;
+      background: #f7f7f7;
+      outline: 1.5px solid #ffe066;
+    }
+  }
 
   @media (max-width: 768px) {
     width: 100%;
@@ -70,7 +111,7 @@
 }
 
 .imageContainer {
-  width: 50%;
+  width: 40%;
   height: 100%;
 
   img {

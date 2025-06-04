@@ -7,7 +7,11 @@
 <p>
 O Plant Guardians é uma solução que combina IoT, visão computacional e atuadores para proteger plantações de forma não-letal contra animais invasores. O sistema detecta automaticamente a presença de animais através de câmeras e sensores PIR, e ativa mecanismos de dissuasão como sons ultrassônicos, luzes estroboscópicas ou sprinklers.
 
-
+<h2>🎨 Protótipo Figma</h2>
+<p>
+Acesse o protótipo visual do Plant Guardians no Figma:<br>
+<a href="https://www.figma.com/design/axn3DwABzwcnJ97iklYEoH/Plant-Guardians?node-id=0-1&t=Zu792ibCGBHyVK1J-1" target="_blank">🔗 Ver no Figma</a>
+</p>
 
 <pre>
 <code class="language-mermaid">

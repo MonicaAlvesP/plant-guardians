@@ -61,7 +61,6 @@ const ContactForm = () => {
     return nameValid && emailValid && phoneValid && messageValid;
   };
 
-
   return (
     <main className={s.formContainer} id='form-contact'>
       <form onSubmit={handleSubmit} className={s.form}>
@@ -143,7 +142,7 @@ const ContactForm = () => {
             rows="5"
             required
             placeholder="Como podemos ajudar?"
-            style={{ resize: 'vertical', minHeight: '100px', maxHeight: '300px' }} // Adicione esta linha
+            style={{ minHeight: '100px', maxHeight: '300px' }}
           ></textarea>
         </div>
 
@@ -151,7 +150,6 @@ const ContactForm = () => {
           {isSubmitting ? 'Enviando...' : 'Solicitar Demonstração'}
         </button>
       </form>
-
       <div className={s.imageContainer}>
         <img src={bgImage} alt="fotografia de plantação" />
       </div>

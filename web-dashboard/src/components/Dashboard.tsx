@@ -38,7 +38,6 @@ const Dashboard = () => {
   const [alertEvent, setAlertEvent] = useState<Event | null>(null)
   const [alertType, setAlertType] = useState<AlertType>(undefined)
   const [popupEvent, setPopupEvent] = useState<Event | null>(null)
-  const [events, setEvents] = useState<Event[]>([])
 
   // Simula chegada de novo evento
   useEffect(() => {
@@ -60,10 +59,9 @@ const Dashboard = () => {
         ...popupEvent,
         action_taken: 'Espanto bem-sucedido'
       }
-      setEvents(prev => [updatedEvent, ...prev])
       setPopupEvent(null)
       setAlertEvent(updatedEvent)
-      setAlertType('success') // Só verde aqui!
+      setAlertType('success')
       setTimeout(() => {
         setAlertEvent(null)
         setAlertType(undefined)
@@ -77,10 +75,9 @@ const Dashboard = () => {
         ...popupEvent,
         action_taken: 'Nenhuma ação tomada'
       }
-      setEvents(prev => [updatedEvent, ...prev])
       setPopupEvent(null)
       setAlertEvent(updatedEvent)
-      setAlertType('info') // Só azul aqui!
+      setAlertType('info')
       setTimeout(() => {
         setAlertEvent(null)
         setAlertType(undefined)
